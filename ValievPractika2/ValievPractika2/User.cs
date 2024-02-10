@@ -16,6 +16,6 @@ namespace ValievPractika2
     {
         public int id { get; set; }
         public string Login { get; set; }
-        public string Pass { get; set; }
+        public string Parol { get; set; }
     }
 }

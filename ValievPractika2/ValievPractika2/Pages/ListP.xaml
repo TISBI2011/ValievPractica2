@@ -19,17 +19,20 @@
             <RowDefinition Height="5*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="DgridView" Margin="10" AutoGenerateColumns="False" Grid.ColumnSpan="3" Grid.Row="1" IsReadOnly="True" >
+        <Image Source="C:\Users\is201-1\Pictures\kino.jpg" Grid.ColumnSpan="4" Grid.RowSpan="3" Stretch="Fill"/>
+        <DataGrid x:Name="DgridView" Margin="10" AutoGenerateColumns="False" Grid.ColumnSpan="3" Grid.Row="1" IsReadOnly="True" Loaded="DgridView_Loaded">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding id}" Header="id"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding id_Genre}" Header="Жанр"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Genre.Name}" Header="Жанр"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding Title}" Header="Название"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding Description}" Header="Описание"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding Movie_Date}" Header="Дата показа"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Pushkin_card_status}" Header="Пушкинская карта"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Pushkin_Card_Status}" Header="Пушкинская карта"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="AddButton" Content="Добавить и редактировать" Grid.Row="2" Margin="10" Click="AddButton_Click"></Button>
-        <Button x:Name="DelButton" Content="Удалить" Grid.Row="2" Grid.Column="1" Margin="10" Click="DelButton_Click"></Button>
+        <TextBlock Text="Список кино" FontSize="50" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Button x:Name="BackButton" Content="Назад" Grid.Column="3" Margin="100 10 10 0" Click="BackButton_Click"/>
+        <Button x:Name="AddButton" Content="Добавить" Grid.Row="2" Margin="10" Click="AddButton_Click"></Button>
+        <Button x:Name="EditButton" Content="Редактировать" Grid.Row="2" Grid.Column="1" Margin="10" Click="EditButton_Click"></Button>
+        <Button x:Name="DelButton" Content="Удалить" Grid.Row="2" Grid.Column="2" Margin="10" Click="DelButton_Click"></Button>
     </Grid>
 </Page>

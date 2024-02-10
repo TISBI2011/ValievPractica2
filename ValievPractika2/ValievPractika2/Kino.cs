@@ -15,11 +15,11 @@ namespace ValievPractika2
     public partial class Kino
     {
         public int id { get; set; }
-        public Nullable<int> id_Genre { get; set; }
+        public Nullable<int> idGenre { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public Nullable<System.DateTime> Movie_Date { get; set; }
-        public Nullable<bool> Pushkin_card_status { get; set; }
+        public Nullable<bool> Pushkin_Card_Status { get; set; }
     
         public virtual Genre Genre { get; set; }
     }

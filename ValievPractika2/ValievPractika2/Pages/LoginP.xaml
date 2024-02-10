@@ -9,11 +9,11 @@
       Title="LoginP">
 
     <Grid>
-        <StackPanel>
-            <Label Content="Login" FontSize="25" />
-            <Label Content="Username"/>
+        <Image Source="C:\Users\is201-1\Pictures\kino2.jpg" Stretch="Fill"/>
+        <StackPanel Width="200">
+            <TextBlock Text="Login" Visibility="Visible"/>
             <TextBox x:Name="TBusername"/>
-            <Label Content="Password"/>
+            <TextBlock Text="Password"/>
             <TextBox x:Name="TBpass"/>
             <Button x:Name="Bsubmit" Click="Bsubmit_Click" Content="submit" Margin="0 10"/>
         </StackPanel>

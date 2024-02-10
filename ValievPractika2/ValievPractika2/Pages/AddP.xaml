@@ -19,22 +19,22 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="auto"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Text="id" FontSize="20" Margin="10"></TextBlock>
-        <TextBlock Text="Жанр" FontSize="20" Margin="10" Grid.Row="1"></TextBlock>
-        <TextBlock Text="Название" FontSize="20" Margin="10" Grid.Row="2"></TextBlock>
-        <TextBlock Text="Описание" FontSize="20" Margin="10" Grid.Row="3"></TextBlock>
-        <TextBlock Text="Дата показа" FontSize="20" Margin="10" Grid.Row="4"></TextBlock>
-        <TextBlock Text="Статус П карты" FontSize="20" Margin="10" Grid.Row="5"></TextBlock>
-        <TextBox x:Name="TBid" Grid.Column="1" Margin="20" Text="{Binding id}"></TextBox>
-        <TextBox x:Name="TBGenre" Grid.Column="1" Margin="20" Grid.Row="1" Text="{Binding id_Genre}"></TextBox>
-        <TextBox x:Name="TBTitle" Grid.Column="1" Margin="20" Grid.Row="2" Text="{Binding Title}"></TextBox>
-        <TextBox x:Name="TBDescription" Grid.Column="1" Margin="20" Grid.Row="3" Text="{Binding Description}"></TextBox>
-        <TextBox x:Name="TBDate" Grid.Column="1" Margin="20" Grid.Row="4" Text="{Binding Movie_Date}"></TextBox>
-        <ComboBox x:Name="TBPushkinCard" Grid.Column="1" Margin="20" Grid.Row="5" Text="{Binding Movie_Date}"></ComboBox>
+        <Image Source="C:\Users\is201-1\Pictures\kino3.jpg" Grid.ColumnSpan="3" Grid.RowSpan="10" Stretch="Fill"/>
+        <TextBlock Text="Жанр" FontSize="20" Margin="5" Grid.Row="1"></TextBlock>
+        <TextBlock Text="Название" FontSize="20" Margin="5" Grid.Row="2"></TextBlock>
+        <TextBlock Text="Описание" FontSize="20" Margin="5" Grid.Row="3"></TextBlock>
+        <TextBlock Text="Дата показа" FontSize="20" Margin="5" Grid.Row="4"></TextBlock>
+        <TextBlock Text="Статус П карты" FontSize="20" Margin="5" Grid.Row="5"></TextBlock>
+        <ComboBox x:Name="CBGenre" Grid.Column="1" Grid.Row="1" Margin="10" DisplayMemberPath="Name" SelectedItem="{Binding Genre}"/>
+        <TextBox x:Name="TBTitle" Grid.Column="1" Margin="10" Grid.Row="2" Text="{Binding Title}"></TextBox>
+        <TextBox x:Name="TBDescription" Grid.Column="1" Margin="10" Grid.Row="3" Text="{Binding Description}"></TextBox>
+        <Calendar x:Name="CDate" Grid.Column="1" Grid.Row="4" SelectedDate="{Binding Movie_Date}"></Calendar>
+        <CheckBox x:Name="CheckBPushkinCard" Grid.Column="1" Margin="10" Grid.Row="5" IsChecked ="{Binding Pushkin_Card_Status}"/>
         <Button x:Name="SaveBtn" Content="Сохранить" Grid.Row="6" Grid.Column="1" Margin="10" Click="SaveBtn_Click"></Button>
+        <Button x:Name="BackBtn" Content="Назад" Grid.Row="6" Grid.Column="3" Margin="10" Click="BackBtn_Click"></Button>
     </Grid>
 </Page>

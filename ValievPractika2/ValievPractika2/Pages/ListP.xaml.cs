@@ -41,6 +41,27 @@ namespace ValievPractika2.Pages
             }
             else MessageBox.Show("Ничего не выбрано");
             DgridView.ItemsSource = App.DB.Kino.ToList();
-        }       
+        }
+
+        private void EditButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedKino = DgridView.SelectedItem as Kino;
+            if (selectedKino == null)
+            {
+                MessageBox.Show("Ничегоне выбрано");
+                return;
+            }
+            NavigationService.Navigate(new AddP(selectedKino));
+        }
+
+        private void DgridView_Loaded(object sender, RoutedEventArgs e)
+        {
+            DgridView.ItemsSource = App.DB.Kino.ToList();
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace ValievPractika2.Pages
         private void Bsubmit_Click(object sender, RoutedEventArgs e)
         {
             var user = App.DB.User.FirstOrDefault(x => x.Login == TBusername.Text);
-            if (user == null || user.Pass != TBpass.Text)
+            if (user == null || user.Parol != TBpass.Text)
             {
                 MessageBox.Show("Неверный логин или пароль");
                 return;

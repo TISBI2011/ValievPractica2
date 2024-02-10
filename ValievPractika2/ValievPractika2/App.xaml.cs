@@ -13,7 +13,7 @@ namespace ValievPractika2
     /// </summary>
     public partial class App : Application
     {
-        public static Practica2ValievEntities DB = new Practica2ValievEntities();
+        public static Pr2ValievEntities DB = new Pr2ValievEntities();
         public static User LUser;
     }
 }

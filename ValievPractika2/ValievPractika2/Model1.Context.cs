@@ -13,10 +13,10 @@ namespace ValievPractika2
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Practica2ValievEntities : DbContext
+    public partial class Pr2ValievEntities : DbContext
     {
-        public Practica2ValievEntities()
-            : base("name=Practica2ValievEntities")
+        public Pr2ValievEntities()
+            : base("name=Pr2ValievEntities")
         {
         }
     

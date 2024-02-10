@@ -21,20 +21,34 @@ namespace ValievPractika2.Pages
     public partial class AddP : Page
     {
         public Kino ContKino;
-        public AddP(Kino selKino)
+        Kino contextKino;
+        public AddP(Kino kino)
         {
             InitializeComponent();
-            ContKino = selKino;
-            this.DataContext = ContKino;
+            contextKino = kino;
+            DataContext = contextKino;
+            CBGenre.ItemsSource = App.DB.Genre.ToList();
         }
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (ContKino.id == 0)
+            try
             {
-                App.DB.Kino.Add(ContKino);
+                if (contextKino.id == 0)
+                    App.DB.Kino.Add(contextKino);
+
+                App.DB.SaveChanges();
+                NavigationService.GoBack();
+
             }
-            App.DB.SaveChanges();
-            NavigationService.Navigate(new ListP());
+            catch
+            {
+                MessageBox.Show("Zapolnite vse polya");
+            }
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }

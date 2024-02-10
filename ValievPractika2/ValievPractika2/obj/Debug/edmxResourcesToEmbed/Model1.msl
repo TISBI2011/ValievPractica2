@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище Practica2ValievModelContainer" CdmEntityContainer="Practica2ValievEntities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Pr2ValievModelContainer" CdmEntityContainer="Pr2ValievEntities">
     <EntitySetMapping Name="Genre">
-      <EntityTypeMapping TypeName="Practica2ValievModel.Genre">
+      <EntityTypeMapping TypeName="Pr2ValievModel.Genre">
         <MappingFragment StoreEntitySet="Genre">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="Genre_Name" ColumnName="Genre_Name" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Kino">
-      <EntityTypeMapping TypeName="Practica2ValievModel.Kino">
+      <EntityTypeMapping TypeName="Pr2ValievModel.Kino">
         <MappingFragment StoreEntitySet="Kino">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="id_Genre" ColumnName="id_Genre" />
+          <ScalarProperty Name="idGenre" ColumnName="idGenre" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Movie_Date" ColumnName="Movie_Date" />
-          <ScalarProperty Name="Pushkin_card_status" ColumnName="Pushkin_card_status" />
+          <ScalarProperty Name="Pushkin_Card_Status" ColumnName="Pushkin_Card_Status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="Practica2ValievModel.sysdiagrams">
+      <EntityTypeMapping TypeName="Pr2ValievModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -33,11 +33,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="User">
-      <EntityTypeMapping TypeName="Practica2ValievModel.User">
+      <EntityTypeMapping TypeName="Pr2ValievModel.User">
         <MappingFragment StoreEntitySet="User">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="Login" ColumnName="Login" />
-          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Parol" ColumnName="Parol" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
